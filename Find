@@ -1,0 +1,16 @@
+public void find(int data)
+{
+	find(data,this.root);
+}
+ private void find(int data,Node n)
+{
+	 if(n==null) {
+		 System.out.println("not found");
+		 return;}
+	if(data==n.data)
+		System.out.println("Found");
+	else if(data>n.data)
+		find(data,n.right);
+	else
+		find(data,n.left);
+}
